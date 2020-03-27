@@ -10,7 +10,7 @@
                 </select>
                 <br><br>
                 <label>Select a Proof Request:</label>
-                <select id="currentProofRequest" onchange="showDiv(this.value, 'proofRequestsClass')" class="w3-select" name="proof_request_id" required>
+                <select id="currentProofRequest" onchange="show(this.value, 'proofRequestsClass')" class="w3-select" name="proof_request_id" required>
                     <%for(let pr of Object.keys(proofRequests)) {%>
                     <option value="<%=pr%>"><%=pr%></option>
                     <%}%>
