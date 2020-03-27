@@ -114,6 +114,19 @@
         }
         document.getElementById(`${id}_link`).style['font-weight'] = "bold";
     }
+    let tabs = document.getElementsByClassName("tab");
+    let hashlink = document.location.hash.replace('#', '');
+    let found = false;
+    for(let tab of tabs) {
+        if(tab.id === hashlink) {
+            showTab(hashlink);
+            found = true;
+        }
+    }
+    if(!found) {
+        window.location.href = window.location.href + "#credentials";
+        showTab('relationships');
+    }
     function show(id ) {
         if(document.getElementById(id).style.display==='none') {
             document.getElementById(id).style.display='block';
