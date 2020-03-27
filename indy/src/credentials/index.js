@@ -57,23 +57,23 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
     for(let attr of schema.attrNames) {
         let value;
         switch(attr) {
-            case "name":
-                value = await indy.pairwise.getAttr(theirDid, 'name') || "Alice";
+            case "nombre":
+                value = await indy.pairwise.getAttr(theirDid, 'name') || "Marcos";
                 break;
-            case "degree":
-                value = "Bachelor of Science, Marketing";
+            case "grado":
+                value = "Ingenieria de Tecnologias y Servicios de Telecomunicacion";
                 break;
-            case "status":
-                value = "graduated";
+            case "estado":
+                value = "graduado";
                 break;
             case "ssn":
                 value = "123-45-6789";
                 break;
-            case "year":
-                value = "2015";
+            case "año":
+                value = "2019";
                 break;
-            case "average":
-                value = "5";
+            case "nota":
+                value = "7.3";
                 break;
             default:
                 value = "someValue";
