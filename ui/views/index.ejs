@@ -73,17 +73,14 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    Emitir Credencial
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#crearEsquema" onclick="showTab('crearEsquema')">Crear Esquema</a>
-                    <a class="dropdown-item" href="#crearCredencial" onclick="showTab('crearCredncial')">Crear Credencial</a>
+                    <a class="dropdown-item" href="#crearCredencial" onclick="showTab('crearCredencial')">Crear Credencial</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item"  href="#emitirCredencial" onclick="showTab('emitirCredencial')">Emitir Credencial</a>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#emitir" onclick="showTab('emitir')">Emitir Credenciales</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#mensajes" onclick="showTab('mensajes')">Mensajes</a>
@@ -99,7 +96,6 @@
     <div class="w3-row-padding w3-center w3-margin-top">
         <% include credenciales.ejs %>
         <% include justificante.ejs %>
-        <% include emitirCredencial.ejs %>
         <% include crearCredencial.ejs %>
         <% include crearEsquema.ejs %>
         <% include conexiones.ejs %>
