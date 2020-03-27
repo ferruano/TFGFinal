@@ -1,0 +1,24 @@
+<div id="crearEsquema" class="tab" style="display:none;">
+    <div class="w3-container w3-card w3-padding w3-margin" style="float: left;width: 31%">
+        <h3>Crea un esquema </h3>
+        <form method="POST" action="/api/issuer/create_schema">
+            <label>Nombre del Esquema</label>
+            <input type="text" class="w3-input" name="name_of_schema" value="Transcript">
+            <br><br>
+            <label>Schema Version: </label>
+            <input type="text" class="w3-input" name="version" value="1.3">
+            <br><br>
+            <label>Sustituye el JSON por los atributos</label><br><br>
+            <textarea style="height:220px;" class="w3-input" name="attributes" required>[
+                "nombre",
+                "grado",
+                "estado",
+                "año",
+                "nota",
+                "ssn"
+            ]</textarea>
+            <br><br>
+            <input class="w3-btn w3-white w3-border" type="submit">
+        </form>
+    </div>
+</div>

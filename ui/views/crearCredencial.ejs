@@ -1,0 +1,18 @@
+<div id="crearCredencial" class="tab" style="display:none;">
+    <div class="w3-container w3-card w3-padding w3-margin">
+        <h3>Crea la definición de credencial</h3>
+        <form method="POST" action="/api/issuer/create_cred_def">
+            <label>Selecciona  el  esquema</label>
+            <select class="w3-select" name="schema_id" required>
+                <%for(let schema of schemas) {%>
+                <option value="<%=schema.id%>"><%=schema.name%> <%=schema.version%></option>
+                <%}%>
+            </select>
+            <br><br>
+            <label>Tag:</label>
+            <input class="w3-input" type="text" name="tag" value="MyTranscript" required>
+            <br><br>
+            <input class="w3-btn w3-white w3-border" type="submit">
+        </form>
+    </div>
+</div>
