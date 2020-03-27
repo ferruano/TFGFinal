@@ -1,0 +1,26 @@
+<div class="modal" id="newMessageModel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Enviar Mensaje</h5>
+                <span onclick="document.getElementById('newMessageModel').style.display='none'" class="w3-button w3-display-topright">×</span>
+            </div>
+            <div class="modal-body">
+                <form action="/api/send_message" method="POST" target="_self">
+                    <div class="w3-section">
+                        Destinatario: <input type="text" class="form-control" id="send_message_form_did" placeholder="name@example.com" name="did" value="<%=endpointDid%>">
+                    </div>
+                    <div class="w3-section">
+                        Mensaje: <textarea class="form-control" id="send_message_form_message"  rows="6">
+                                        {
+                                                "type":"SOME_TYPE",
+                                                "message":"test"
+                                        }
+                                     </textarea>
+                    </div>
+                    <input class="w3-btn w3-white w3-border" style="display:block;margin:auto;" type="submit" value="Enviar Mensaje">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

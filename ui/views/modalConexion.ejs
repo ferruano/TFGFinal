@@ -1,0 +1,19 @@
+<div class="modal" id="newRelationshipModel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nueva Conexión</h5>
+                <span onclick="document.getElementById('newRelationshipModel').style.display='none'" class="w3-button w3-display-topright">×</span>
+            </div>
+            <div class="modal-body">
+                <form  action="/api/send_connection_request" method="POST" target="_self">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Endpoint DID:</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="did" required>
+                    </div>
+                    <input class="w3-btn w3-black w3-border" style="display:block;margin:auto;" type="submit" value="Enviar petición de conexión">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

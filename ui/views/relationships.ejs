@@ -1,0 +1,49 @@
+<div id="relationships" class="tab" style="display:none;" >
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h2>AMIGOS</h2>
+                <img class="d-block w-25 mx-auto" src="https://previews.123rf.com/images/antoshkaforever/antoshkaforever1508/antoshkaforever150800186/43026721-amigos-un-signo-de-amistad-relaci%C3%B3n-colaboraci%C3%B3n-la-idea-para-el-logo-social-.jpg" alt="First slide">
+            </div>
+            <%for(let relationship of relationships) {%>
+                <div class="carousel-item">
+                    <svg class="d-block w-25 mx-auto"data-jdenticon-value="<%=relationship.their_did%>"></svg>
+                    <%if(relationship.metadata.name) {%>
+                        <h3><%=relationship.metadata.name%></h3>
+                    <%}%>
+                    <fieldset>
+                        <legend class="" style="border:none;margin:10px;">Relationship DIDs</legend>
+                        <p>My Did: <%=relationship.my_did%></p>
+                        <p>Their Did: <%=relationship.their_did%></p>
+                    </fieldset>
+                    <p>Their Public Did: <%=relationship.metadata.theirEndpointDid%></p>
+                    <p><b>Proofs:</b></p>
+                    <%if(relationship.metadata.proof) {%>
+                        <%for(let proof of relationship.metadata.proof) {%>
+                            <div class="w3-bar w3-card">
+                                <div class="w3-bar-item">
+                                    <p style="text-decoration: underline;"><%=proof.name%></p>
+                                </div>
+                                <div class="w3-bar-item">
+                                    <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Validate</button>
+                                </div>
+                            </div>
+                            <br><br>
+                        <%}%>
+                    <%}%>
+                </div>
+
+            <%}%>
+        </div>
+        <a class="left carousel-control" href="#carouselExampleControls" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carouselExampleControls" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <div id="buttonAbajo">
+        <button type="submit" class="btn btn-dark btn-lg btn-block" onclick="document.getElementById('newRelationshipModel').style.display='block'">Nueva Conexión</button>
+    </div>
+
+</div>

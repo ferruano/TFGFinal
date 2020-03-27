@@ -1,0 +1,53 @@
+<div id="proofs" class="tab" style="display:none;">
+    <div class="card">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>PRUEBAS</strong>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5">
+
+            <!-- Form -->
+            <form class="text-center" method="POST" action="/api/proofs/send_request" style="color: #757575;">
+
+                <!-- Name -->
+                <div class="md-form mt-3">
+                    <label for="materialSubscriptionFormPasswords">Conexión</label>
+                    <select class="form-control form-control-lg" name="their_relationship_did" required>
+                        <%for(let relationship of relationships) {%>
+                        <option value="<%=relationship.their_did%>"><%=relationship.metadata.name%></option>
+                        <%}%>
+                    </select>
+
+                </div>
+
+                <!-- E-mai -->
+                <div class="md-form">
+                    <label>Selecciona una solicitud de prueba:</label>
+                    <select id="currentProofRequest" onchange="show(this.value)" class="form-control form-control-lg" name="proof_request_id" required>
+                        <%for(let pr of Object.keys(proofRequests)) {%>
+                        <option value="<%=pr%>"><%=pr%></option>
+                        <%}%>/#proofs
+                        <option value="proofRequestOther">Otra, pegue otra solicitud de prueba --></option>
+                    </select>
+                </div>
+
+                <!-- Sign in button -->
+                <div>
+                    <%for(let pr of Object.keys(proofRequests)) {%>
+                        <div id="<%=proofRequests[pr].name%>" class="proofRequestsClass" style="width:100%; display:none;">
+                            <textarea style="width:100%;" rows="20" readonly><%=proofRequests[pr].string%></textarea>
+                        </div>
+                    <%}%>
+                    <div class="form-group  proofRequestsClass" id="proofRequestOther" style="width:100%; display:none;">
+                        <label for="comment">Solicitud de prueba</label>
+                        <textarea class="form-control"  rows="20" id="comment" ></textarea>
+                    </div>
+                </div>
+                <input class="w3-btn w3-white w3-border" type="submit">
+            </form>
+            <!-- Form -->
+        </div>
+    </div>
+</div>
