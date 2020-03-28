@@ -7,7 +7,7 @@
             </div>
             <%for(let relationship of relationships) {%>
                 <div class="carousel-item">
-                    <img src="https://avatars.dicebear.com/v2/identicon/:<%=relationship.their_did%>.svg" style="width: 200px; height: 200px;">
+                    <img class="d-block w-25 mx-auto" src="https://avatars.dicebear.com/v2/identicon/:<%=relationship.their_did%>.svg">
                     <%if(relationship.metadata.name) {%>
                         <h3><%=relationship.metadata.name%></h3>
                     <%}%>
