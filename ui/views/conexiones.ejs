@@ -13,8 +13,8 @@
                     <%}%>
                     <fieldset>
                         <legend class="" style="border:none;margin:10px;">Relationship DIDs</legend>
-                        <p>My Did: <%=relationship.my_did%></p>
-                        <p>Their Did: <%=relationship.their_did%></p>
+                        <p>Mi DID: <%=relationship.my_did%></p>
+                        <p>Su DID: <%=relationship.their_did%></p>
                     </fieldset>
                     <p>Their Public Did: <%=relationship.metadata.theirEndpointDid%></p>
                     <p><b>Proofs:</b></p>
@@ -28,7 +28,7 @@
                                     <%}%>
                                 </div>
                                 <div class="w3-bar-item">
-                                    <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Validate</button>
+                                    <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Validar</button>
                                 </div>
                             </div>
                         <br><br>
