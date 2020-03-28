@@ -123,7 +123,7 @@ services:
       - ICON_SRC=https://maxcdn.icons8.com/Share/icon/Users/person_female1600.png
       - THEME=DarkGray
       - PORT=3000
-      - NOMBRE=Marcos
+      - NAME=Marcos
       - EMAIL=marcos@upm.es
       - PASSWORD=123
       - USERNAME=marcos
@@ -152,7 +152,7 @@ services:
       - ICON_SRC=http://www.clker.com/cliparts/g/l/R/7/h/u/teamstijl-person-icon-blue-hi.png
       - THEME=BurlyWood
       - PORT=3001
-      - NOMBRE=Bob
+      - NAME=Bob
       - EMAIL=bob@byu.edu
       - PASSWORD=123
       - USERNAME=bob
@@ -180,7 +180,7 @@ services:
       - ICON_SRC=https://cdn2.iconfinder.com/data/icons/bubble-education-icons-1/360/School-512.png
       - THEME=OliveDrab
       - PORT=3002
-      - NOMBRE=UPM
+      - NAME=UPM
       - EMAIL=admin@upm.es
       - PASSWORD=123
       - USERNAME=upm
@@ -208,7 +208,7 @@ services:
       - ICON_SRC=https://i.ytimg.com/vi/JUMufld7UcY/maxresdefault.jpg
       - THEME=LightSteelBlue
       - PORT=3003
-      - NOMBRE=Acme Corporation
+      - NAME=Acme Corporation
       - EMAIL=boss@acme.com
       - PASSWORD=123
       - USERNAME=acme
@@ -236,7 +236,7 @@ services:
       - ICON_SRC=http://www.psdgraphics.com/file/bank-building-icon.jpg
       - THEME=Coral
       - PORT=3004
-      - NOMBRE=Thrift Bank
+      - NAME=Thrift Bank
       - EMAIL=owner@thrift.com
       - PASSWORD=123
       - USERNAME=thrift

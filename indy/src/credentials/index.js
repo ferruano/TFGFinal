@@ -58,7 +58,7 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
         let value;
         switch(attr) {
             case "nombre":
-                value = await indy.pairwise.getAttr(theirDid, 'nombre') || "Marcos";
+                value = await indy.pairwise.getAttr(theirDid, 'name') || "Marcos";
                 break;
             case "grado":
                 value = "Ingenieria de Tecnologias y Servicios de Telecomunicacion";
