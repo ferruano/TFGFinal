@@ -14,6 +14,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jdenticon@2.0.0"></script>
+
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 
@@ -162,9 +163,9 @@
             console.log(xhttp);
             if(xhttp.status === 200) {
                 console.log("Validation succeeded");
-                div.innerHTML = '<i class="fa fa-check" style="color:green;font-size:120px;"></i>'
+                div.innerHTML = '<i class="fa fa-check-circle-o" style="color:green;font-size:100px; aria-hidden="true"></i>'
             } else {
-                div.innerHTML = '<i class="fa fa-times" style="color:red;font-size:120px;"></i>'
+                div.innerHTML = '<i class="far fa-times-circle" style="color:red;font-size:100px;"></i>'
                 console.log("Validation failed");
             }
         }
