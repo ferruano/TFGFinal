@@ -114,7 +114,7 @@ async function issueGovernmentIdCredential() {
         govIdSchema = await indy.issuer.getSchema(govIdSchemaId);
     } catch(e) {
         [govIdSchemaId, govIdSchema] = await sdk.issuerCreateSchema(stewardDid, schemaName, schemaVersion, [
-            'nombre',
+            'name',
             'email',
             'tax_id'
         ]);
