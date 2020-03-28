@@ -22,9 +22,9 @@
         </div>
         <div class="w3-half">
             <%for(let pr of Object.keys(proofRequests)) {%>
-            <div id="<%=proofRequests[pr].name%>" class="proofRequestsClass" style="width:100%;display:none;">
-                <textarea style="width:100%;" rows="20" readonly><%=proofRequests[pr].string%></textarea>
-            </div>
+                <div id="<%=proofRequests[pr].name%>" class="proofRequestsClass" style="width:100%;display:none;">
+                    <textarea style="width:100%;" rows="20" readonly><%=proofRequests[pr].string%></textarea>
+                </div>
             <%}%>
             <div id="proofRequestOther" class="proofRequestsClass" style="width:100%;display:none;">
                 <textarea name="manual_entry" style="width:100%;" rows="20"></textarea>
