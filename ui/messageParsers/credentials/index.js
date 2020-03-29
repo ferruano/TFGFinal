@@ -6,7 +6,7 @@ exports.credentialOffer = async function (message) {
     message.relationshipName = await indy.pairwise.getAttr(theirDid, 'name');
     message.links = [
         {
-            name: "Accept",
+            name: "Aceptar",
             href: "/api/credentials/accept_offer",
             method: "POST",
             message: JSON.stringify({
@@ -14,7 +14,7 @@ exports.credentialOffer = async function (message) {
             })
         },
         {
-            name: "Reject",
+            name: "Rechazar",
             href: "/api/credentials/reject_offer",
             method: "POST",
             message: JSON.stringify({

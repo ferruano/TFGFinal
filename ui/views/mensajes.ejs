@@ -19,12 +19,12 @@
                                 <button class="w3-btn w3-white w3-border" type="submit" onclick="request('<%=message.links.accept.href%>', '<%=message.links.accept.method%>', JSON.stringify({ name: document.getElementById('connection_name').value, messageId: document.getElementById('connection_message_id').value}))">Aceptar petición de Conexión</button>
                             <%}%>
                             <%if (message.links.reject) {%>
-                                <button class="w3-btn w3-white w3-border" type="submit" onclick="request('<%=message.links.reject.href%>', '<%=message.links.reject.method%>')">REchazar petición de Conexión</button>
+                                <button class="w3-btn w3-white w3-border" type="submit" onclick="request('<%=message.links.reject.href%>', '<%=message.links.reject.method%>')">Rechazar petición de Conexión</button>
                             <%}%>
                             <br><br>
                         </form>
                     <%} else if(message.message.type === messageTypes.proofs.REQUEST) {%>
-                    <p><b>Requested Attributes:</b></p>
+                    <p><b>Atributos Requeridos</b></p>
                             <%for(let attr of Object.keys(message.message.message.proofRequest.requested_attributes)) {%>
                                 <p><%=message.message.message.proofRequest.requested_attributes[attr].name%></p>
                             <%}%>

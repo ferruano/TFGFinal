@@ -12,7 +12,7 @@ exports.request = async function(message) {
     }
     message.links = [
         {
-            name: "Accept",
+            name: "Aceptar",
             href: "/api/proofs/accept",
             method: "POST",
             message: JSON.stringify({
@@ -20,7 +20,7 @@ exports.request = async function(message) {
             })
         },
         {
-            name: "Reject",
+            name: "REchazar",
             href: "/api/messages/delete",
             method: "POST",
             message: JSON.stringify({

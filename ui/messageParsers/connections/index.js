@@ -5,12 +5,12 @@ exports.connectionsRequest = function (message) {
         accept: {
             href: "/api/connections/request",
             method: "PUT",
-            rel: "accept"
+            rel: "Aceptar"
         },
         reject: {
             href: "/api/connections/request",
             method: "DELETE",
-            rel: "reject"
+            rel: "Rechazar"
         }
     };
     message.relationship = {};
@@ -22,12 +22,12 @@ exports.connectionsResponse = function (message) {
         accept: {
             href: "/api/connections/request",
             method: "PUT",
-            rel: "accept"
+            rel: "Aceptar"
         },
         reject: {
             href: "/api/connections/request",
             method: "DELETE",
-            rel: "reject"
+            rel: "Rechazar"
         }
     };
     message.relationship = {};
