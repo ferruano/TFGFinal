@@ -143,36 +143,6 @@ services:
     volumes:
       - node1-data:/home/indy/ledger
 
-  #
-  #
-  bob:
-    image: indy-agentjs
-    command: "bash -c 'sleep 10; npm start'"
-    environment:
-      - ICON_SRC=http://www.clker.com/cliparts/g/l/R/7/h/u/teamstijl-person-icon-blue-hi.png
-      - THEME=BurlyWood
-      - PORT=3001
-      - NAME=Bob
-      - EMAIL=bob@byu.edu
-      - PASSWORD=123
-      - USERNAME=bob
-      - PUBLIC_DID_ENDPOINT=173.17.0.160:3001
-      - RUST_LOG=${RUST_LOG}
-      - TEST_POOL_IP=${TEST_POOL_IP}
-    ports:
-      - 3001:3001
-    depends_on:
-      - node1
-      - node2
-      - node3
-      - node4
-      - marcos
-    networks:
-      services:
-        ipv4_address: 173.17.0.160
-    volumes:
-      - node1-data:/home/indy/ledger
-
   upm:
     image: indy-agentjs
     command: "bash -c 'sleep 10; npm start'"
@@ -201,7 +171,7 @@ services:
     volumes:
       - node1-data:/home/indy/ledger
 
-  acme:
+  uc3m:
     image: indy-agentjs
     command: "bash -c 'sleep 10; npm start'"
     environment:
@@ -209,9 +179,9 @@ services:
       - THEME=LightSteelBlue
       - PORT=3003
       - NAME=Acme Corporation
-      - EMAIL=boss@acme.com
+      - EMAIL=admin@uc3m.com
       - PASSWORD=123
-      - USERNAME=acme
+      - USERNAME=uc3m
       - PUBLIC_DID_ENDPOINT=173.17.0.180:3003
       - RUST_LOG=${RUST_LOG}
       - TEST_POOL_IP=${TEST_POOL_IP}
@@ -226,34 +196,6 @@ services:
     networks:
       services:
         ipv4_address: 173.17.0.180
-    volumes:
-      - node1-data:/home/indy/ledger
-
-  thrift:
-    image: indy-agentjs
-    command: "bash -c 'sleep 10; npm start'"
-    environment:
-      - ICON_SRC=http://www.psdgraphics.com/file/bank-building-icon.jpg
-      - THEME=Coral
-      - PORT=3004
-      - NAME=Thrift Bank
-      - EMAIL=owner@thrift.com
-      - PASSWORD=123
-      - USERNAME=thrift
-      - PUBLIC_DID_ENDPOINT=173.17.0.190:3004
-      - RUST_LOG=${RUST_LOG}
-      - TEST_POOL_IP=${TEST_POOL_IP}
-    ports:
-      - 3004:3004
-    depends_on:
-      - node1
-      - node2
-      - node3
-      - node4
-      - marcos
-    networks:
-      services:
-        ipv4_address: 173.17.0.190
     volumes:
       - node1-data:/home/indy/ledger
 
