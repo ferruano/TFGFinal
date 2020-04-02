@@ -20,7 +20,7 @@ const config = {
     // This information is used to issue your "Government ID"
     userInformation: {
         name: process.env.NAME || 'Marcos',
-        email: process.env.EMAIL || 'alice@faber.edu',
+        email: process.env.EMAIL || 'marcos@upm.es',
         tax_id: process.env.TAX_ID || '123-45-6789',
         icon_src: process.env.ICON_SRC || 'https://cdn3.iconfinder.com/data/icons/black-easy/512/538738-school_512x512.png',
         username: process.env.USERNAME || 'marcos',
