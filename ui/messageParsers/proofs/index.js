@@ -20,7 +20,7 @@ exports.request = async function(message) {
             })
         },
         {
-            name: "REchazar",
+            name: "Rechazar",
             href: "/api/messages/delete",
             method: "POST",
             message: JSON.stringify({

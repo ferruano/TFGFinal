@@ -123,7 +123,7 @@ services:
       - ICON_SRC=https://maxcdn.icons8.com/Share/icon/Users/person_female1600.png
       - THEME=DarkGray
       - PORT=3000
-      - NAME=marcos
+      - NAME=MARCOS
       - EMAIL=marcos@upm.es
       - PASSWORD=123
       - USERNAME=marcos
@@ -178,7 +178,7 @@ services:
       - ICON_SRC=https://i.ytimg.com/vi/JUMufld7UcY/maxresdefault.jpg
       - THEME=LightSteelBlue
       - PORT=3003
-      - NAME=uc3m
+      - NAME=UC3M
       - EMAIL=admin@uc3m.com
       - PASSWORD=123
       - USERNAME=uc3m
