@@ -120,6 +120,7 @@ services:
       dockerfile: agent.dockerfile
     command: "bash -c 'sleep 10; npm start'"
     environment:
+      - TIPO=alumno
       - ICON_SRC=https://maxcdn.icons8.com/Share/icon/Users/person_female1600.png
       - THEME=DarkGray
       - PORT=3000
@@ -147,6 +148,7 @@ services:
     image: indy-agentjs
     command: "bash -c 'sleep 10; npm start'"
     environment:
+      - TIPO=universidad
       - ICON_SRC=https://cdn2.iconfinder.com/data/icons/bubble-education-icons-1/360/School-512.png
       - THEME=OliveDrab
       - PORT=3002
@@ -175,6 +177,7 @@ services:
     image: indy-agentjs
     command: "bash -c 'sleep 10; npm start'"
     environment:
+      - TIPO=universidad
       - ICON_SRC=https://i.ytimg.com/vi/JUMufld7UcY/maxresdefault.jpg
       - THEME=LightSteelBlue
       - PORT=3003
