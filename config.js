@@ -19,7 +19,7 @@ const config = {
 
     // This information is used to issue your "Government ID"
     userInformation: {
-        tipo: process.env.TIPO || 'alumno',
+        type: process.env.TIPO || 'alumno',
         name: process.env.NAME || 'MARCOS',
         email: process.env.EMAIL || 'marcos@upm.es',
         tax_id: process.env.TAX_ID || '123-45-6789',
