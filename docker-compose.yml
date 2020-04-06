@@ -178,7 +178,7 @@ services:
     command: "bash -c 'sleep 10; npm start'"
     environment:
       - TIPO=universidad
-      - ICON_SRC=https://i.ytimg.com/vi/JUMufld7UcY/maxresdefault.jpg
+      - ICON_SRC=https://mastersonlineempresa.uc3m.es/wp-content/uploads/2018/11/logo-800x237.png
       - THEME=LightSteelBlue
       - PORT=3003
       - NAME=UC3M
