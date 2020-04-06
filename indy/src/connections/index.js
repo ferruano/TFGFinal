@@ -96,7 +96,6 @@ exports.acceptResponse = async function (myDid, rawMessage) {
 
             let meta = JSON.stringify({
                 name: relationship.name,
-                icon: relationship.icon,
                 theirEndpointDid: relationship.theirEndpointDid
             });
             await sdk.createPairwise(await indy.wallet.get(), theirDid, relationship.myNewDid, meta);

@@ -88,7 +88,7 @@ exports[MESSAGE_TYPES.CREDENTIALS_ACCEPT_OFFER] = async function(req, res) {
 
 exports[MESSAGE_TYPES.CREDENTIALS_REJECT_OFFER] = async function(req, res) {
     try {
-        indy.store.messages.deleteMessage(req.body.messageId);
+        indy.store.messages.config.userdeleteMessage(req.body.messageId);
         res.status(202).send();
     } catch(e) {
         res.status(500).send();

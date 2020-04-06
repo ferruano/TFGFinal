@@ -13,9 +13,6 @@
             </div>
             <%for(let relationship of relationships) {%>
                 <div class="carousel-item">
-                    <%if(relationship.metadata.icon) {%>
-                        <img class="d-block w-25 mx-auto" src="<%=relationship.metadata.icon%>">
-                    <%}%>
                     <%if(relationship.metadata.name) {%>
                         <h3><%=relationship.metadata.name%></h3>
                     <%}%>
