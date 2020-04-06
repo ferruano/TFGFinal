@@ -11,7 +11,9 @@
                     <img class="d-block w-25 mx-auto" src="<%=credential.attrs['icon']%>">
                     <h3><%=credential.schema_id%></h3>
                     <%for(let attr of Object.keys(credential.attrs).sort()) {%>
-                        <p><%=attr%>: <%=credential.attrs[attr]%></p>
+                        <%if(attr!='icon') {%>
+                            <p><%=attr%>: <%=credential.attrs[attr]%></p>
+                         <%}%>
                     <%}%>
                 </div>
             <%}%>
