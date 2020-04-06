@@ -121,7 +121,7 @@ services:
     command: "bash -c 'sleep 10; npm start'"
     environment:
       - TIPO=alumno
-      - ICON_SRC=https://maxcdn.icons8.com/Share/icon/Users/person_female1600.png
+      - ICON_SRC=https://image.flaticon.com/icons/png/512/46/46285.png
       - THEME=DarkGray
       - PORT=3000
       - NAME=MARCOS
