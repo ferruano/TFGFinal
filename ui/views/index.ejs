@@ -56,24 +56,38 @@
                 <a class="nav-link" href="/logout">Logout <span class="sr-only" >(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#conexiones" onclick="showTab('conexiones')">Conexiones</a>
+                <%if(process.env.TIPO=="alumno") {%>
+                    <a class="nav-link" href="#conexiones" onclick="showTab('conexiones')">Universidades</a>
+                <%}%>
+                <%if(process.env.TIPO=="universidad") {%>
+                    <a class="nav-link" href="#conexiones" onclick="showTab('conexiones')">Alumnos</a>
+                <%}%>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#credenciales" onclick="showTab('credenciales')">Credenciales</a>
+                <%if(process.env.TIPO=="alumno") {%>
+                    <a class="nav-link" href="#credenciales" onclick="showTab('credenciales')">Titulaciones</a>
+                <%}%>
+                <%if(process.env.TIPO=="universidad") {%>
+                    <a class="nav-link" href="#credenciales" onclick="showTab('credenciales')">Credenciales</a>
+                <%}%>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#justificante" onclick="showTab('justificante')">Justificantes</a>
+                <%if(process.env.TIPO=="universidad") {%>
+                    <a class="nav-link" href="#justificante" onclick="showTab('justificante')">Justificantes</a>
+                <%}%>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Emitir Credencial
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#crearEsquema" onclick="showTab('crearEsquema')">Crear Esquema</a>
-                    <a class="dropdown-item" href="#crearCredencial" onclick="showTab('crearCredencial')">Crear Credencial</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item"  href="#emitirCredencial" onclick="showTab('emitirCredencial')">Emitir Credencial</a>
-                </div>
+                <%if(process.env.TIPO=="universidad") {%>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Emitir Credencial
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#crearEsquema" onclick="showTab('crearEsquema')">Crear Esquema</a>
+                        <a class="dropdown-item" href="#crearCredencial" onclick="showTab('crearCredencial')">Crear Credencial</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"  href="#emitirCredencial" onclick="showTab('emitirCredencial')">Emitir Credencial</a>
+                    </div>
+                <%}%>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#mensajes" onclick="showTab('mensajes')">Mensajes</a>
