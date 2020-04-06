@@ -46,6 +46,7 @@ router.get('/', auth.isLoggedIn, async function (req, res) {
         endpointDid: await indy.did.getEndpointDid(),
         proofRequests: proofRequests,
         name: config.userInformation.name,
+        icon: config.userInformation.icon_src,
         srcId: config.userInformation.icon_src,
         theme: THEME
     });
