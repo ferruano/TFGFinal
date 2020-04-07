@@ -14,9 +14,9 @@
             <%for(let relationship of relationships) {%>
                 <div class="carousel-item">
                     <%if(process.env.TIPO=="alumno") {%>
-                        <img src="https://image.flaticon.com/icons/png/512/46/46285.png">
-                    <%}else{%>
                         <img src="https://image.flaticon.com/icons/png/512/295/295429.png">
+                    <%}else{%>
+                        <img src="https://image.flaticon.com/icons/png/512/46/46285.png">
                     <%}%>
                     <%if(relationship.metadata.name) {%>
                         <h3><%=relationship.metadata.name%></h3>

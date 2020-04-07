@@ -60,6 +60,9 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
             case "nombre":
                 value = await indy.pairwise.getAttr(theirDid, 'name') || "Marcos";
                 break;
+            case "icon":
+                value= "https://yt3.ggpht.com/a/AGF-l78530eYtqkcdJj3g4iwY_9No1BkZzMSqo1TXw=s900-c-k-c0xffffffff-no-rj-mo";
+                break;
             case "grado":
                 value = "Ingenieria de Tecnologias y Servicios de Telecomunicacion";
                 break;
