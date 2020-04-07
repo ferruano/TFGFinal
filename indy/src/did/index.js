@@ -138,7 +138,7 @@ async function issueGovernmentIdCredential() {
     let govIdValues = {
         name: {"raw": config.userInformation.name, "encoded": indy.credentials.encode(config.userInformation.name)},
         email: {"raw": config.userInformation.email, "encoded": indy.credentials.encode(config.userInformation.email)},
-        icon: {"raw": config.userInformation.icon_src, "encoded": indy.credentials.encode(config.userInformation.icon_src)},
+        icon: {"raw": "https://www.dyntra.org/new/wp-content/uploads/2017/05/ministerio-de-educacion-cultura-y-deporte.jpg", "encoded": indy.credentials.encode("https://www.dyntra.org/new/wp-content/uploads/2017/05/ministerio-de-educacion-cultura-y-deporte.jpg")},
         tax_id: {"raw": config.userInformation.tax_id, "encoded": indy.credentials.encode(config.userInformation.tax_id)}
     };
 
