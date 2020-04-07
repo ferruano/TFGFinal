@@ -16,8 +16,8 @@ let proofRequests;
 exports.getProofRequests = async function(force) {
     if(force || !proofRequests) {
         proofRequests = {};
-        proofRequests['General-Identity'] = {
-            name: 'General-Identity',
+        proofRequests['Identidad-General'] = {
+            name: 'Identidad-General',
             version: '0.2',
             requested_attributes: {
                 attr1_referent: {
@@ -29,8 +29,8 @@ exports.getProofRequests = async function(force) {
         };
         let transcriptCredDef = await indy.issuer.getCredDefByTag('MyTranscript');
         if(transcriptCredDef) {
-            proofRequests['Transcript-Data'] = {
-                name: 'Transcript-Data',
+            proofRequests['DatosGraduado'] = {
+                name: 'DatosGraduado',
                 version: '0.1',
                 requested_attributes: {
                     'attr1_referent': {
