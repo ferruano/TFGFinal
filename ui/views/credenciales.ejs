@@ -7,7 +7,7 @@
                     <img class="d-block w-25 mx-auto" src="<%=credential.attrs['icon']%>">
                     <h3><%=credential.schema_id%></h3>
                     <%for(let attr of Object.keys(credential.attrs).sort()) {%>
-                        <%if(config.userInformation.type=='alumno') {%>
+                        <%if(process.env.TIPO=="alumno") {%>
                             <%if(attr=='dni') {%>
                                 <p><%=attr%>: <%=credential.attrs[attr]%></p>
                             <%}%>
