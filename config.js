@@ -22,7 +22,7 @@ const config = {
         type: process.env.TIPO || 'alumno',
         name: process.env.NAME || 'MARCOS',
         email: process.env.EMAIL || 'marcos@upm.es',
-        tax_id: process.env.TAX_ID || '123-45-6789',
+        dni: process.env.TAX_ID || '056965472J',
         icon_src: process.env.ICON_SRC || 'https://image.flaticon.com/icons/png/512/46/46285.png',
         username: process.env.USERNAME || 'MARCOS',
         password: process.env.PASSWORD || '123'

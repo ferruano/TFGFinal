@@ -114,10 +114,10 @@ async function issueGovernmentIdCredential() {
         govIdSchema = await indy.issuer.getSchema(govIdSchemaId);
     } catch(e) {
         [govIdSchemaId, govIdSchema] = await sdk.issuerCreateSchema(stewardDid, schemaName, schemaVersion, [
-            'name',
+            'nombre',
             'email',
             'icon',
-            'tax_id'
+            'dni'
         ]);
 
         await indy.issuer.sendSchema(await indy.pool.get(), stewardWallet, stewardDid, govIdSchema);
@@ -136,10 +136,10 @@ async function issueGovernmentIdCredential() {
 
 
     let govIdValues = {
-        name: {"raw": config.userInformation.name, "encoded": indy.credentials.encode(config.userInformation.name)},
+        nombre: {"raw": config.userInformation.name, "encoded": indy.credentials.encode(config.userInformation.name)},
         email: {"raw": config.userInformation.email, "encoded": indy.credentials.encode(config.userInformation.email)},
         icon: {"raw": "https://www.dyntra.org/new/wp-content/uploads/2017/05/ministerio-de-educacion-cultura-y-deporte.jpg", "encoded": indy.credentials.encode("https://www.dyntra.org/new/wp-content/uploads/2017/05/ministerio-de-educacion-cultura-y-deporte.jpg")},
-        tax_id: {"raw": config.userInformation.tax_id, "encoded": indy.credentials.encode(config.userInformation.tax_id)}
+        dni: {"raw": config.userInformation.dni, "encoded": indy.credentials.encode(config.userInformation.dni)}
     };
 
     let [govIdCredential] = await sdk.issuerCreateCredential(stewardWallet, govIdCredOffer, govIdCredRequest, govIdValues);
