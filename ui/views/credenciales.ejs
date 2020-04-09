@@ -2,6 +2,10 @@
 <div id="credenciales" class="tab" style="display:none;">
     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h2>CREDENCIALES</h2>
+                <img class="d-block w-25 mx-auto" src="https://imageog.flaticon.com/icons/png/512/80/80118.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt="First slide">
+            </div>
             <%for(let credential of credentials) {%>
                 <div class="carousel-item">
                     <img class="d-block w-25 mx-auto" src="<%=credential.attrs['icon']%>">
