@@ -58,7 +58,7 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
         let value;
         switch(attr) {
             case "nombre":
-                value = await indy.pairwise.getAttr(theirDid, 'name') || "Marcos";
+                value = await indy.pairwise.getAttr(theirDid, 'nombre') || "Marcos";
                 break;
             case "icon":
                 value= "https://yt3.ggpht.com/a/AGF-l78530eYtqkcdJj3g4iwY_9No1BkZzMSqo1TXw=s900-c-k-c0xffffffff-no-rj-mo";
