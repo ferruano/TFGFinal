@@ -6,7 +6,7 @@
                 <label>Alumno: </label>
                 <select class="w3-select" name="their_relationship_did" required>
                     <%for(let relationship of relationships) {%>
-                    <option value="<%=relationship.their_did%>"><%=relationship.metadata.nombre%></option>
+                    <option value="<%=relationship.their_did%>"><%=relationship.metadata.name%></option>
                     <%}%>
                 </select>
                 <br><br>
